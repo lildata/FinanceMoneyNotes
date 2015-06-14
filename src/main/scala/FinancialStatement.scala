@@ -1,3 +1,5 @@
+package FinancialAnalysis
+
 import java.util.Date
 
 abstract class FinancialStatement {
@@ -57,7 +59,6 @@ class BalanceSheet(date:Date) extends FinancialStatement {
   assert(assets == liabilities + ownership_equity)
 
 
-  def net_working_capital = current_assets - current_liabilities
 }
 
 
