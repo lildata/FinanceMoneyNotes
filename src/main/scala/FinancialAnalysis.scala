@@ -127,3 +127,17 @@ object ProfitabilityRatios {
   }
 
 
+  object ValueMeasurement {
+
+    def entreprise_value(bs: BalanceSheet, market_value_of_equity: Float) =
+      market_value_of_equity + bs.liabilities - bs.cash
+
+    def present_value(cash_flow:Float,discount_rate:Float,years:Int) =
+      cash_flow / scala.math.pow((1 + discount_rate), years)
+
+    def future_value(cash_flow:Float,discount_rate:Float,years:Int) = cash_flow * scala.math.pow((1 + discount_rate), years)
+
+
+
+  }
+
