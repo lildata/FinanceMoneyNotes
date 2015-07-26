@@ -59,8 +59,15 @@ Object MarketLiquidity {
          */
         var float:Float
         
+        /**
+         * Number of days for the share to get traded again
+         */
         def turnover(float:Float,averageDailyVolume:Float):Days = float/averageDailyVolume
         
+        /**
+         * Indirect measure of the liquidity
+         */
+        var heldByInstitutions:Percent
         
         
     }
