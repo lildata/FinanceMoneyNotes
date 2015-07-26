@@ -35,3 +35,37 @@ Object Terminology {
         "floating currency" -> """A currency that uses a floating exchange rate."""
     )
 }
+
+Object MarketLiquidity {
+    Object Metrics {
+        
+        /**
+         * Difference between the prices quoted for an immediate sale (bid) and an immediate purchase (offer)
+         * Size of the transaction cost
+         */
+        def bid_askSpread(askPrice:Float,bidPrice:Float) = askPrice - bidPrice
+        
+        def bid_askSpreadPerc(askPrice:Float,bidPrice:Float) = (askPrice - bidPrice) / ((askPrice + bidPrice)/2)
+        
+        def isFrictionlessAsset(askPrice:Float,bidPrice:Float) = if(askPrice == bidPrice) true else false
+        
+        /**
+         * Number of shares traded
+         */
+        var averageDailyVolume:Float
+        
+        /**
+         * Number of shares outstanding
+         */
+        var float:Float
+        
+        def turnover(float:Float,averageDailyVolume:Float):Days = float/averageDailyVolume
+        
+        
+        
+    }
+}
+
+
+
+
