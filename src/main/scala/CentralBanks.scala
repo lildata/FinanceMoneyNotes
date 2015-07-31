@@ -6,17 +6,20 @@ trait CentralBank {
 
 object FederalReserveSystem extends CentralBank {
 
-  def setDiscountRate(when:Date) = new DiscountRate(when)
+  
 
 
 
   object FederalOpenMarketCommittee {
     def setTargetInterbankRate(when:Date) = new FederalFundsRate(when)
+    def setDiscountRate(when:Date) = new DiscountRate(when)
   }
 
 }
 
-case class FederalReserveBank(district:String)
+class FederalReserveBank(district:String) {
+  
+}
 
 class DiscountRate(when:Date) extends InterestRate { //or base rate, or repo rate
   val defintion = """
