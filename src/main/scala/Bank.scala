@@ -1,17 +1,5 @@
 
 
-object Money {
-  //the 4 prices of money
-  val prices = Map(
-    "Par"           -> "different types of money (currency, deposits)",
-    "Interest"      -> "future money (fed funds, Eurodollars, repo)",
-    "Exchange rate" -> "foreign money",
-    "Price level"   -> "commodities"
-  )
-}
-
-
-
 object Bank {
 
   val functions = "Clearing"::"Market making"::"advance clearing"::"intermediation"::Nil
