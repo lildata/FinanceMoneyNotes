@@ -68,5 +68,14 @@ object TreasuryBond extends UnitedStatesTreasurySecurity with Marketable {
   val minDuration = 20.year
   val maxDuration = 30.year
 }
+
 object TreasuryInflationProtectedSecurity extends UnitedStatesTreasurySecurity with Marketable
 
+/**
+ * Various notes
+ * 
+ * Outside Money / Inside Money
+ * this is relative...
+ * Pretty much all money is inside money
+ * Inside money is some form of credit
+ * Almost all money is somebody's liabilitiy
