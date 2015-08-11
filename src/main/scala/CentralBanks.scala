@@ -15,6 +15,11 @@ object FederalReserveSystem extends CentralBank {
     def setDiscountRate(when:Date) = new DiscountRate(when)
   }
 
+  /**
+   * Credit facilities in which financial institutions go to borrow funds from the Federal Reserve.
+   */
+  object DiscountWindow
+
 }
 
 class FederalReserveBank(district:String) {
