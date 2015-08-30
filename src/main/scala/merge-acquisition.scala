@@ -7,4 +7,8 @@ object MA {
    * @return Synergistic benefits from acquisition
    */
   def GAIN(Vb:Float, Vt:Float, Vbt:Float) = Vbt - (Vb + Vt) 
+  
+
+  var validReasonsForMA = "Synergies"::"Inefficient target management"::"Market power"::"Taxes"::Nil
+  var questionableReasonsForMA = "Increasing EPS"::"Diversification"::Nil
 }
